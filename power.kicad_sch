@@ -1263,6 +1263,11 @@
     (uuid fcb1f4c7-edb2-4051-8626-ccfa25df27c5)
   )
 
+  (text "6,8k ~ 1,48V\n10k  ~ 1,20V" (at 57.785 133.35 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 4465aa11-dcab-47ae-8422-ace8615c0c59)
+  )
+
   (label "PGOOD" (at 243.205 27.94 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 0da16003-8c51-4d3a-b6a2-26bf8e60284b)

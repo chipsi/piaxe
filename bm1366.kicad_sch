@@ -2364,7 +2364,7 @@
     (property "Value" "TestPoint" (at 142.24 111.633 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm" (at 145.415 113.665 0)
+    (property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm" (at 145.415 113.665 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 145.415 113.665 0)
