@@ -15,3 +15,6 @@ Differences:
 - replaced level shiter IC with cheaper mosfets
 - 
 
+Errata:
+
+- it seems LittleFuses 154 don't exist for more than 10A 😞
