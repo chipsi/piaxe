@@ -11,10 +11,6 @@ Differences:
 - added some protection like TVS diode and fuses
 - revised buck switching regulator circuit
 - revised heatsink
-- removed every additional features like DAC, current- or temperature measurement
+- removed every additional features like DAC, current- and temperature measurement, temperature controlled fan PWM controller, additional testpoints
 - replaced level shiter IC with cheaper mosfets
-- 
 
-Errata:
-
-- it seems LittleFuses 154 don't exist for more than 10A 😞
