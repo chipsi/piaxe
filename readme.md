@@ -3,7 +3,8 @@ Original Repository: https://github.com/skot/bitaxe
 
 This is an **untested** variant (Bitaxe ultra 1.2 with BM1366) for Raspberry Pi.
 
-![image](https://github.com/shufps/piaxe/assets/3079832/785777f7-f9ab-4a81-bdca-5a2528ca8036)
+![image](https://github.com/shufps/piaxe/assets/3079832/3c4e768c-3516-487d-843c-290c77de9466)
+
 
 Differences:
 
