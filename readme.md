@@ -15,4 +15,5 @@ Differences:
 - revised heatsink
 - removed every additional features like DAC, current- and temperature measurement, temperature controlled fan PWM controller, additional testpoints
 - replaced level shiter IC with cheaper mosfets
+- smallest components have 0805 size for easier manual assembly
 
