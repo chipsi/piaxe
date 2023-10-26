@@ -995,7 +995,7 @@
     (property "ki_keywords" "inductor choke coil reactor magnetic")
     (path "/8ec0a9c6-2b78-44ef-a83d-9047d2828409/6b639bef-e3dd-4432-944c-54db39e07e7b")
     (attr smd)
-    (fp_text reference "L2" (at -5.1448 0.2061 -180) (layer "F.SilkS")
+    (fp_text reference "L2" (at -5.1448 0.2061) (layer "F.SilkS")
         (effects (font (size 0.8 0.8) (thickness 0.15)))
       (tstamp aec11254-e146-41f0-af6b-8fd92133f3d4)
     )
@@ -1071,10 +1071,10 @@
       (net 59 "Net-(Q1-D)") (pinfunction "1") (pintype "passive") (tstamp 5b335348-7124-499d-b754-9c56fca82fc6))
     (pad "2" smd rect (at 2.725 0 270) (size 2.95 3.5) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 72 "Net-(JP2-A)") (pinfunction "2") (pintype "passive") (tstamp e9e9b5e4-a83e-40c7-9a1d-5da2ffd401d7))
-    (model "${KICAD6_3DMODEL_DIR}/Inductor_SMD.3dshapes/L_Bourns_SRP7028A_7.3x6.6mm.wrl"
+    (model "${KIPRJMOD}/3d/MPXV1D0630LR33.step"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz -90 0 0))
     )
   )
 
@@ -1997,9 +1997,9 @@
       (net 70 "+12V") (pinfunction "D") (pintype "passive") (solder_paste_margin_ratio -0.15) (tstamp 1b726a06-d3fa-4788-92e6-aaee4dc72c51))
     (pad "3" smd rect (at 2.8 1.905 270) (size 0.7 0.7) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 70 "+12V") (pinfunction "D") (pintype "passive") (solder_paste_margin_ratio -0.15) (tstamp 50d94fcc-5559-452a-8025-7d9f1e8b9583))
-    (model "${KICAD6_3DMODEL_DIR}/Package_SON.3dshapes/VSONP-8-1EP_5x6_P1.27mm.wrl"
+    (model "${KIPRJMOD}/3d/AB2_SON5x6MM.wrl"
       (offset (xyz 0 0 0))
-      (scale (xyz 1 1 1))
+      (scale (xyz 0.4 0.4 1))
       (rotate (xyz 0 0 0))
     )
   )
@@ -2099,9 +2099,9 @@
       (net 59 "Net-(Q1-D)") (pinfunction "D") (pintype "passive") (solder_paste_margin_ratio -0.15) (tstamp 0890c3a8-532b-4ba4-a785-2dd3e993bdf7))
     (pad "3" smd rect (at 2.8 1.905 90) (size 0.7 0.7) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 59 "Net-(Q1-D)") (pinfunction "D") (pintype "passive") (solder_paste_margin_ratio -0.15) (tstamp fcc6d50d-7f48-4f43-8a7f-159c023c72b6))
-    (model "${KICAD6_3DMODEL_DIR}/Package_SON.3dshapes/VSONP-8-1EP_5x6_P1.27mm.wrl"
+    (model "${KIPRJMOD}/3d/AB2_SON5x6MM.wrl"
       (offset (xyz 0 0 0))
-      (scale (xyz 1 1 1))
+      (scale (xyz 0.4 0.4 1))
       (rotate (xyz 0 0 0))
     )
   )
@@ -2458,7 +2458,7 @@
       (net 7 "+1V5") (pinfunction "VDD") (pintype "input") (thermal_bridge_angle 45) (tstamp 2851455b-5658-4b21-9123-be4fb178ffbe))
     (pad "30" smd rect locked (at 0 1.108 180) (size 4.277 4.53) (layers "F.Cu" "F.Mask")
       (net 1 "GND") (pinfunction "GND") (pintype "input") (thermal_bridge_angle 45) (tstamp f35fe548-95fd-45dd-98ce-2faf210d7767))
-    (model "${KIPRJMOD}/3d/heatsink-40x40.step"
+    (model "${KIPRJMOD}/3d/heatsink-40x40-2.step"
       (offset (xyz -19.75 -19.25 0.8))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3216,10 +3216,10 @@
       (net 1 "GND") (pintype "passive") (tstamp 3a9f3301-9fde-4436-af32-0489dd0eb02a))
     (pad "3" thru_hole circle (at 4.7 3) (size 2.6 2.6) (drill 1.6) (layers "*.Cu" "*.Mask")
       (net 1 "GND") (pintype "passive") (tstamp 503f3b18-1e7a-4d79-94dd-ba37925a6d20))
-    (model "${KICAD6_3DMODEL_DIR}/Connector_BarrelJack.3dshapes/BarrelJack_CUI_PJ-102AH_Horizontal.wrl"
-      (offset (xyz 0 0 0))
+    (model "${KIPRJMOD}/3d/barrel-jack.step"
+      (offset (xyz 0 -14 0))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz 0 0 -90))
     )
   )
 
@@ -3263,6 +3263,11 @@
       (net 70 "+12V") (pintype "passive") (tstamp 715115b7-7750-4f55-bb4e-4829c50c7ac5))
     (pad "2" smd rect (at 3.1875 0) (size 4.245 3.81) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 71 "Net-(F1-Pad2)") (pintype "passive") (tstamp 40ea8481-d6cd-45e0-b7ed-dc2cd2f12571))
+    (model "${KIPRJMOD}/3d/Littelfuse 0154.500DRT without value_black v2.step"
+      (offset (xyz -10.75 -2.5 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (footprint "Mounting_Holes:MountingHole_3.2mm_M3" locked (layer "F.Cu")
