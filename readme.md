@@ -22,5 +22,5 @@ Installation:
 
 - add to `/boot/config.txt`:
 ```
-dtoverlay=pwm,pin=12,func=0
+dtoverlay=pwm
 ```
