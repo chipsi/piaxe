@@ -18,3 +18,9 @@ Differences:
 - replaced level shifter IC with cheaper mosfets
 - smallest components have 0805 size for easier manual assembly
 
+Installation:
+
+- add to `/boot/config.txt`:
+```
+dtoverlay=pwm
+```
