@@ -878,7 +878,7 @@
     )
   )
 
-  (junction (at 140.97 85.09) (diameter 0) (color 0 0 0 0)
+  (junction (at 137.795 85.09) (diameter 0) (color 0 0 0 0)
     (uuid 3d07e721-a1b3-4226-b7e6-80fbaf290f51)
   )
   (junction (at 99.06 118.745) (diameter 0) (color 0 0 0 0)
@@ -886,6 +886,9 @@
   )
   (junction (at 163.195 69.85) (diameter 0) (color 0 0 0 0)
     (uuid c886ef25-7fda-48f7-aa9f-9ca01f0f806e)
+  )
+  (junction (at 134.62 82.55) (diameter 0) (color 0 0 0 0)
+    (uuid e72b2708-bc54-40f2-840c-12dc096f92b5)
   )
 
   (no_connect (at 147.955 115.57) (uuid 27cc76fa-c7b5-47f8-97ec-3fddf53d65cc))
@@ -927,11 +930,11 @@
     (stroke (width 0) (type default))
     (uuid 1496654a-40aa-4c3e-a644-389c91b3df8b)
   )
-  (wire (pts (xy 140.97 85.09) (xy 140.97 80.01))
+  (wire (pts (xy 137.795 85.09) (xy 137.795 78.74))
     (stroke (width 0) (type default))
     (uuid 2d8afac9-579b-4105-aa93-c2d3ca638868)
   )
-  (wire (pts (xy 133.35 85.09) (xy 140.97 85.09))
+  (wire (pts (xy 123.825 85.09) (xy 137.795 85.09))
     (stroke (width 0) (type default))
     (uuid 31982264-71c1-4e9e-8d93-90af825fa622)
   )
@@ -971,6 +974,10 @@
     (stroke (width 0) (type default))
     (uuid 5ab3aafa-b2b3-492a-b1d8-3e7babe6a87a)
   )
+  (wire (pts (xy 134.62 68.58) (xy 134.62 71.12))
+    (stroke (width 0) (type default))
+    (uuid 5bbd987e-2db4-4332-b1b3-075a6a42611c)
+  )
   (wire (pts (xy 163.195 67.945) (xy 163.195 69.85))
     (stroke (width 0) (type default))
     (uuid 5c9a5466-8476-4552-b943-23adf76c420c)
@@ -979,7 +986,7 @@
     (stroke (width 0) (type default))
     (uuid 6476caad-1399-4fdb-b75f-a73561b0cb63)
   )
-  (wire (pts (xy 140.97 85.09) (xy 147.955 85.09))
+  (wire (pts (xy 137.795 85.09) (xy 147.955 85.09))
     (stroke (width 0) (type default))
     (uuid 66f6fcb3-d08f-4620-b26c-f7db24eb710c)
   )
@@ -991,9 +998,17 @@
     (stroke (width 0) (type default))
     (uuid 6e229ec4-f357-4d4b-8656-cfbf66b0f09b)
   )
-  (wire (pts (xy 140.97 68.58) (xy 140.97 72.39))
+  (wire (pts (xy 134.62 78.74) (xy 134.62 82.55))
+    (stroke (width 0) (type default))
+    (uuid 8f64dbaa-b57c-4942-850a-a75ae06953bc)
+  )
+  (wire (pts (xy 137.795 68.58) (xy 137.795 71.12))
     (stroke (width 0) (type default))
     (uuid 9e8a9479-ce48-4ac9-83b0-9d8ec955a634)
+  )
+  (wire (pts (xy 134.62 82.55) (xy 147.955 82.55))
+    (stroke (width 0) (type default))
+    (uuid a0a4b26c-5322-4f91-901d-03005fd99509)
   )
   (wire (pts (xy 114.935 106.68) (xy 114.935 108.585))
     (stroke (width 0) (type default))
@@ -1019,7 +1034,7 @@
     (stroke (width 0) (type default))
     (uuid d257d59d-276d-4cfc-b8b7-b19ac0968ed5)
   )
-  (wire (pts (xy 133.35 87.63) (xy 147.955 87.63))
+  (wire (pts (xy 123.825 87.63) (xy 147.955 87.63))
     (stroke (width 0) (type default))
     (uuid db440e85-e64d-4291-a846-2744d3c5e574)
   )
@@ -1027,7 +1042,7 @@
     (stroke (width 0) (type default))
     (uuid eceb9e60-ba77-4c85-b055-d8ac1b2aa016)
   )
-  (wire (pts (xy 133.35 82.55) (xy 147.955 82.55))
+  (wire (pts (xy 123.825 82.55) (xy 134.62 82.55))
     (stroke (width 0) (type default))
     (uuid f4bb3642-c809-4ae3-8770-97d08d37ea2f)
   )
@@ -1053,15 +1068,15 @@
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 2b72b52f-80fd-4c98-babe-887430ea65c7)
   )
-  (label "PGOOD" (at 133.35 85.09 0) (fields_autoplaced)
+  (label "PGOOD" (at 123.825 85.09 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 43e1dbe1-1d7c-40aa-84a0-1044a41c4304)
   )
-  (label "NRST" (at 133.35 87.63 0) (fields_autoplaced)
+  (label "NRST" (at 123.825 87.63 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 5103a52b-9a38-482d-aeb0-86f7717ffc26)
   )
-  (label "SDN" (at 133.35 82.55 0) (fields_autoplaced)
+  (label "SDN" (at 123.825 82.55 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 5e1c422c-526f-45ae-9da6-9830a9de9625)
   )
@@ -1140,7 +1155,7 @@
     )
     (pin "1" (uuid 9f034900-45e5-4549-9165-7f6410f40c5f))
     (instances
-      (project "bitaxeUltra"
+      (project "piaxe"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/9bc1a7d6-07fa-4858-9423-fb2dbf7da294"
           (reference "#PWR065") (unit 1)
         )
@@ -1165,7 +1180,7 @@
     )
     (pin "1" (uuid d0b5f07c-8547-4535-af21-5cf8910dc2d8))
     (instances
-      (project "bitaxeUltra"
+      (project "piaxe"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/9bc1a7d6-07fa-4858-9423-fb2dbf7da294"
           (reference "#PWR066") (unit 1)
         )
@@ -1190,7 +1205,7 @@
     )
     (pin "1" (uuid 35c76d38-b850-49f6-9d4b-7aba0b61a2f0))
     (instances
-      (project "bitaxeUltra"
+      (project "piaxe"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/9bc1a7d6-07fa-4858-9423-fb2dbf7da294"
           (reference "#PWR020") (unit 1)
         )
@@ -1216,7 +1231,7 @@
     (pin "1" (uuid 765dd2ca-881a-46be-b771-0d8727985876))
     (pin "2" (uuid 46d9ecf9-25cb-4745-8126-005611e46c1d))
     (instances
-      (project "bitaxeUltra"
+      (project "piaxe"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/9bc1a7d6-07fa-4858-9423-fb2dbf7da294"
           (reference "R11") (unit 1)
         )
@@ -1246,7 +1261,7 @@
           (reference "#PWR0220") (unit 1)
         )
       )
-      (project "bitaxeUltra"
+      (project "piaxe"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/9bc1a7d6-07fa-4858-9423-fb2dbf7da294"
           (reference "#PWR058") (unit 1)
         )
@@ -1271,7 +1286,7 @@
     )
     (pin "1" (uuid 2c665752-7cd1-48c4-973d-3e6511b412a2))
     (instances
-      (project "bitaxeUltra"
+      (project "piaxe"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/9bc1a7d6-07fa-4858-9423-fb2dbf7da294"
           (reference "#PWR091") (unit 1)
         )
@@ -1301,7 +1316,7 @@
           (reference "#PWR0226") (unit 1)
         )
       )
-      (project "bitaxeUltra"
+      (project "piaxe"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/9bc1a7d6-07fa-4858-9423-fb2dbf7da294"
           (reference "#PWR064") (unit 1)
         )
@@ -1328,7 +1343,7 @@
     (pin "2" (uuid 1ff376cf-2f1d-4cea-8d7c-3972824e69ee))
     (pin "3" (uuid f938d410-bded-4b4d-b203-403a3c0a9a8d))
     (instances
-      (project "bitaxeUltra"
+      (project "piaxe"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/9bc1a7d6-07fa-4858-9423-fb2dbf7da294"
           (reference "JP1") (unit 1)
         )
@@ -1403,7 +1418,7 @@
           (reference "J1") (unit 1)
         )
       )
-      (project "bitaxeUltra"
+      (project "piaxe"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/9bc1a7d6-07fa-4858-9423-fb2dbf7da294"
           (reference "J2") (unit 1)
         )
@@ -1433,7 +1448,7 @@
           (reference "#PWR0225") (unit 1)
         )
       )
-      (project "bitaxeUltra"
+      (project "piaxe"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/9bc1a7d6-07fa-4858-9423-fb2dbf7da294"
           (reference "#PWR063") (unit 1)
         )
@@ -1463,7 +1478,7 @@
           (reference "#PWR0222") (unit 1)
         )
       )
-      (project "bitaxeUltra"
+      (project "piaxe"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/9bc1a7d6-07fa-4858-9423-fb2dbf7da294"
           (reference "#PWR060") (unit 1)
         )
@@ -1493,7 +1508,7 @@
           (reference "#PWR0221") (unit 1)
         )
       )
-      (project "bitaxeUltra"
+      (project "piaxe"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/9bc1a7d6-07fa-4858-9423-fb2dbf7da294"
           (reference "#PWR059") (unit 1)
         )
@@ -1530,7 +1545,7 @@
     (pin "3" (uuid f4156793-ef7c-4a25-ba86-51f191932595))
     (pin "4" (uuid 7de4432e-fb76-4ae5-b23c-64d58b2f008e))
     (instances
-      (project "bitaxeUltra"
+      (project "piaxe"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/9bc1a7d6-07fa-4858-9423-fb2dbf7da294"
           (reference "M1") (unit 1)
         )
@@ -1560,9 +1575,35 @@
           (reference "#PWR0226") (unit 1)
         )
       )
-      (project "bitaxeUltra"
+      (project "piaxe"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/9bc1a7d6-07fa-4858-9423-fb2dbf7da294"
           (reference "#PWR067") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R") (at 134.62 74.93 0) (mirror y) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 9893b45c-862a-4bd8-bace-15e9678e111a)
+    (property "Reference" "R10" (at 132.08 73.66 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "100k" (at 132.08 76.2 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 136.398 74.93 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 134.62 74.93 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 3ebe6b44-50c8-4ca0-8dee-e524098dd551))
+    (pin "2" (uuid 01af4ecb-0cc4-4d94-80ca-5c6d8e361c8a))
+    (instances
+      (project "piaxe"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/9bc1a7d6-07fa-4858-9423-fb2dbf7da294"
+          (reference "R10") (unit 1)
         )
       )
     )
@@ -1585,7 +1626,7 @@
     )
     (pin "1" (uuid 848e7426-7f46-467e-bcb4-a7610b2a8410))
     (instances
-      (project "bitaxeUltra"
+      (project "piaxe"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/9bc1a7d6-07fa-4858-9423-fb2dbf7da294"
           (reference "#PWR012") (unit 1)
         )
@@ -1615,7 +1656,7 @@
           (reference "#PWR0224") (unit 1)
         )
       )
-      (project "bitaxeUltra"
+      (project "piaxe"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/9bc1a7d6-07fa-4858-9423-fb2dbf7da294"
           (reference "#PWR062") (unit 1)
         )
@@ -1623,24 +1664,24 @@
     )
   )
 
-  (symbol (lib_id "power:+3V3") (at 140.97 68.58 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+  (symbol (lib_id "power:+3V3") (at 137.795 68.58 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
     (uuid b6eea3ea-e863-4fe4-ba32-a4414a595df0)
-    (property "Reference" "#PWR070" (at 140.97 72.39 0)
+    (property "Reference" "#PWR070" (at 137.795 72.39 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "+3V3" (at 140.97 64.135 0)
+    (property "Value" "+3V3" (at 137.795 62.865 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 140.97 68.58 0)
+    (property "Footprint" "" (at 137.795 68.58 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 140.97 68.58 0)
+    (property "Datasheet" "" (at 137.795 68.58 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 9fe6f027-cfca-4a71-a398-898dbc6ef8c3))
     (instances
-      (project "bitaxeUltra"
+      (project "piaxe"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/9bc1a7d6-07fa-4858-9423-fb2dbf7da294"
           (reference "#PWR070") (unit 1)
         )
@@ -1670,9 +1711,34 @@
           (reference "#PWR0223") (unit 1)
         )
       )
-      (project "bitaxeUltra"
+      (project "piaxe"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/9bc1a7d6-07fa-4858-9423-fb2dbf7da294"
           (reference "#PWR061") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+3V3") (at 134.62 68.58 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid ce296a60-2cf2-45ac-9507-12901977cd0c)
+    (property "Reference" "#PWR097" (at 134.62 72.39 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3V3" (at 134.62 62.865 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 134.62 68.58 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 134.62 68.58 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid a2f81ac1-bbc6-4f9c-9241-6a35b815f8db))
+    (instances
+      (project "piaxe"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/9bc1a7d6-07fa-4858-9423-fb2dbf7da294"
+          (reference "#PWR097") (unit 1)
         )
       )
     )
@@ -1695,7 +1761,7 @@
     )
     (pin "1" (uuid dfbbeab8-13d3-49f6-9908-ff0b0e9c3ba7))
     (instances
-      (project "bitaxeUltra"
+      (project "piaxe"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/9bc1a7d6-07fa-4858-9423-fb2dbf7da294"
           (reference "#PWR014") (unit 1)
         )
@@ -1703,25 +1769,25 @@
     )
   )
 
-  (symbol (lib_id "Device:R") (at 140.97 76.2 0) (mirror y) (unit 1)
+  (symbol (lib_id "Device:R") (at 137.795 74.93 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ee72dac5-b518-47a7-8ace-0b134c98bd18)
-    (property "Reference" "R4" (at 138.43 74.93 0)
+    (property "Reference" "R4" (at 140.335 73.66 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "10k" (at 138.43 77.47 0)
+    (property "Value" "10k" (at 140.335 76.2 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 142.748 76.2 90)
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 136.017 74.93 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 140.97 76.2 0)
+    (property "Datasheet" "~" (at 137.795 74.93 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 3e677e2b-eb34-4410-97b0-4efb67642ab1))
     (pin "2" (uuid 244ede89-1850-464f-957b-684f9ca1bff1))
     (instances
-      (project "bitaxeUltra"
+      (project "piaxe"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/9bc1a7d6-07fa-4858-9423-fb2dbf7da294"
           (reference "R4") (unit 1)
         )
@@ -1746,7 +1812,7 @@
     )
     (pin "1" (uuid a86f3aba-e50c-4ab6-b1d8-612f6e9e3247))
     (instances
-      (project "bitaxeUltra"
+      (project "piaxe"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/9bc1a7d6-07fa-4858-9423-fb2dbf7da294"
           (reference "#PWR013") (unit 1)
         )
