@@ -3,13 +3,13 @@ import serial
 import time
 import math
 import logging
+import struct
+import hashlib
 
 from rpi_hardware_pwm import HardwarePWM
 
 from crc_package.crc_functions import crc5, crc16_false
-from bm1366 import bm1366
-
-from stratum import utils
+from bm1366 import bm1366, utils
 
 logging.basicConfig(level=logging.DEBUG)
 
@@ -79,68 +79,88 @@ while (not is_power_good()):
 bm1366.ll_init(serial_tx_func, serial_rx_func, reset_func)
 
 # init bm1366
-bm1366.init(200)
+bm1366.init(400)
 init_response = bm1366.receive_work()
 
 if init_response.nonce != 0x00006613:
     raise Exception("bm1366 not detected")
 
+#bm1366.set_job_difficulty_mask(64)
 
-bm1366.set_job_difficulty_mask(64)
+def reverse_hex(hex_string):
+    bytes = utils.hex2bin(hex_string)
+    return bytearray(bytes[::-1]).hex()
 
-if False:
-    for i in range(0, 5):
-        print(f"send {i}")
-        bm1366.send_work(
-            (i + 8) % 128,
-            0x8826bf10,
-            0x17048194, #0x30c31b18, #nbits
-            0x647384a0,
-            utils.hex_to_be("1bbac7eab8feaab5a75a1f1fd8f15fedb008d4ca8270262eedd62f17e672da03"),
-            utils.hex_to_be("0000000000000000000005674e8b6be06d49a4de2691660b1393feb9e6ece8d8"),
-            0x20000000
-        )
-        time.sleep(0.5)
 
-hex_string = "55AA216100100000000F8952419E016AF64E447CC41EED1CB9CD5511694CB4D9BA0DDA5A1EF88450BA68D96216ECF5630BC000000000C000000659049105857DDA2478A5E7CCCFE036FE8BE8EF8C25721D400000020ECBE"
+work = bm1366.WorkRequest()
 
-if True:
-	bm1366.send_work(
-	    0x28,
-	    0x00000000,
-	    0x207fffff, #nbits
-	    0x64af16e0,
-	    bytearray.fromhex("F3C00910CBDAF23F0FFFDF3F7B42ACC98D70ED9BBFBA1B1D4474EDE0322885C7"),
-	    bytearray.fromhex("000000000C000000659049105857DDA2478A5E7CCCFE036FE8BE8EF8C25721D4"),
-	    0x20000000
-	)
+
+merkle_root_be = utils.swap_endianness_32bit(utils.hex2bin("768c54aa39f020353f6474b7b14e0add32e29cbd67b44326eb869f4557ce2f3d"))
+prev_block_hash_be = utils.swap_endianness_32bit(utils.hex2bin("00000000000000000000332ccd3fb7c76ee315ba66b731bee66d49c8458bc095"))
+
+work.create_work(
+    0x28,
+    0x00000000,
+    0x187fffff, #nbits
+    0x654de8ae,
+    merkle_root_be,
+    prev_block_hash_be,
+    0x20000000
+)
+bm1366.send_work(work)
+
+work.merkle_root = utils.hex2bin(reverse_hex("768c54aa39f020353f6474b7b14e0add32e29cbd67b44326eb869f4557ce2f3d"))
+work.prev_block_hash = utils.hex2bin(reverse_hex("00000000000000000000332ccd3fb7c76ee315ba66b731bee66d49c8458bc095"))
+
 time.sleep(0.5)
 
 
-# Remove spaces and convert to a bytearray
-#byte_array = bytearray.fromhex(hex_string)
-
-#bm1366.send_simple(byte_array)
-
-#try:
-
-while False:
-    serial_port.timeout = 60.0
-
-    data = serial_port.read(1)
-    print(f"{data[0]:02x}")
+#cgminer nonce testing
+# truediffone == 0x00000000FFFF0000000000000000000000000000000000000000000000000000
+truediffone = 26959535291011309493156476344723991336010898738574164086137773096960.0
 
 
-#bm1366.send_simple([0x55, 0xAA, 0x52, 0x05, 0x00, 0x00, 0x0A])
+def verify_work(work, result):
+    work.print()
+    result.print()
+    header = struct.pack('<I', work.version | (bm1366.reverse_uint16(result.version) << 13))
+    header += work.prev_block_hash
+    header += work.merkle_root
+    header += struct.pack('<I', work.ntime)
+    header += struct.pack('<I', work.nbits)
+    header += struct.pack('<I', result.nonce)
+    logging.debug("header: %s", bytearray(header).hex())
 
-result = bm1366.receive_work()
-print(str(result))
-#except Exception as e:
-#    print(e)
+    # Hash the header twice using SHA-256.
+    hash_buffer = hashlib.sha256(header).digest()
+    hash_result = hashlib.sha256(hash_buffer).digest()
+    logging.debug("result: %s", bytearray(hash_result).hex())
+    #d64 = truediffone
+    #s64 = utils.le256todouble(hash_result)
+    #ds = d64 / s64
+    return hash_result #ds
+
+if False:
+    dummywork = bm1366.WorkRequest()
+    dummywork.version = 838860800
+    dummywork.prev_block_hash = utils.hex2bin(reverse_hex("00000000000000000000332ccd3fb7c76ee315ba66b731bee66d49c8458bc095"))
+    dummywork.merkle_root = utils.hex2bin(reverse_hex("768c54aa39f020353f6474b7b14e0add32e29cbd67b44326eb869f4557ce2f3d"))
+    dummywork.ntime = 1699604654
+    dummywork.nbits = 386171284
 
 
-#print("waiting 30...")
-#time.sleep(30)
+    dummyresult = bm1366.AsicResult()
+    dummyresult.nonce = 3420097076
+    dummyresult.version = 0
+
+    verify_work(dummywork, dummyresult)
+
+while True:
+    result = bm1366.receive_work()
+    # we assume we have some work done
+    if result and result.nonce and result.nonce not in [0x0, 0x6613]:
+        verify_work(work, result)
+
 
 serial_port.close()  # Close the serial port
 
@@ -148,6 +168,5 @@ serial_port.close()  # Close the serial port
 
 # shutdown power supply
 GPIO.output(SDN_PIN, True)
-
 
 GPIO.cleanup()  # Reset the state of the GPIO pins

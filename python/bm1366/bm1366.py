@@ -4,8 +4,9 @@ import serial
 import time
 import math
 import logging
-
+import json
 from crc_package.crc_functions import crc5, crc16_false
+from bm1366 import utils
 
 TYPE_JOB = 0x20
 TYPE_CMD = 0x40
@@ -26,7 +27,7 @@ CMD_INACTIVE = 0x03
 RESPONSE_CMD = 0x00
 RESPONSE_JOB = 0x80
 
-SLEEP_TIME = 20  # This could refer to milliseconds or seconds, depending on the context
+SLEEP_TIME = 20
 FREQ_MULT = 25.0
 
 CLOCK_ORDER_CONTROL_0 = 0x80
@@ -72,6 +73,45 @@ class AsicResult:
         result.crc = unpacked_data[6]
 
         return result
+
+    def print(self):
+        print("AsicResult:")
+        print(f"  preamble:        {self.preamble}")
+        print(f"  nonce:           {self.nonce:04x}")
+        print(f"  midstate_num:    {self.midstate_num}")
+        print(f"  job_id:          {self.job_id}")
+        print(f"  version:         {self.version:04x}")
+        print(f"  crc:             {self.crc:02x}")
+
+class WorkRequest:
+    def __init__(self):
+        self.id  = int(0)
+        self.starting_nonce = int(0)
+        self.nbits = int(0)
+        self.ntime = int(0)
+        self.merkle_root = bytearray([])
+        self.prev_block_hash = bytearray([])
+        self.version = int(0)
+
+    def create_work(self, id, starting_nonce, nbits, ntime, merkle_root, prev_block_hash, version):
+        self.id = id
+        self.starting_nonce = starting_nonce
+        self.nbits = nbits
+        self.ntime = ntime
+        self.merkle_root = merkle_root
+        self.prev_block_hash = prev_block_hash
+        self.version = version
+
+    def print(self):
+        print("WorkRequest:")
+        print(f"  id:              {self.id:02x}")
+        print(f"  starting_nonce:  {self.starting_nonce:04x}")
+        print(f"  nbits:           {self.nbits:04x}")
+        print(f"  ntime:           {self.ntime:04x}")
+        print(f"  merkle_root:     {self.merkle_root.hex()}")
+        print(f"  prev_block_hash: {self.prev_block_hash.hex()}")
+        print(f"  version:         {self.version:04x}")
+
 
 
 class TaskResult:
@@ -268,15 +308,13 @@ def send_init(frequency):
     send_simple([0x55, 0xAA, 0x51, 0x09, 0x00, 0x54, 0x00, 0x00, 0x00, 0x03, 0x1D])
     send_simple([0x55, 0xAA, 0x51, 0x09, 0x00, 0x58, 0x02, 0x11, 0x11, 0x11, 0x06])
 
-#---
     send_simple([0x55, 0xAA, 0x41, 0x09, 0x00, 0x2C, 0x00, 0x7C, 0x00, 0x03, 0x03])
-#    send_simple([0x55, 0xAA, 0x51, 0x09, 0x00, 0x28, 0x11, 0x30, 0x02, 0x00, 0x03])
+#    send_simple([0x55, 0xAA, 0x51, 0x09, 0x00, 0x28, 0x11, 0x30, 0x02, 0x00, 0x03]) change baud?
     send_simple([0x55, 0xAA, 0x41, 0x09, 0x00, 0xA8, 0x00, 0x07, 0x01, 0xF0, 0x15])
     send_simple([0x55, 0xAA, 0x41, 0x09, 0x00, 0x18, 0xF0, 0x00, 0xC1, 0x00, 0x0C])
     send_simple([0x55, 0xAA, 0x41, 0x09, 0x00, 0x3C, 0x80, 0x00, 0x85, 0x40, 0x04])
     send_simple([0x55, 0xAA, 0x41, 0x09, 0x00, 0x3C, 0x80, 0x00, 0x80, 0x20, 0x11])
     send_simple([0x55, 0xAA, 0x41, 0x09, 0x00, 0x3C, 0x80, 0x00, 0x82, 0xAA, 0x05])
-#---
 
     send_simple([0x55, 0xAA, 0x52, 0x05, 0x00, 0x00, 0x0A])
 
@@ -286,7 +324,6 @@ def send_init(frequency):
 
     send_simple([0x55, 0xAA, 0x51, 0x09, 0x00, 0x10, 0x00, 0x00, 0x15, 0x1C, 0x02])
     send_simple([0x55, 0xAA, 0x51, 0x09, 0x00, 0xA4, 0x90, 0x00, 0xFF, 0xFF, 0x1C])
-    #send_simple([0x55, 0xAA, 0x52, 0x05, 0x00, 0x00, 0x0A]) # chipid
 
 def send_read_address():
     send_BM1366(TYPE_CMD | GROUP_ALL | CMD_READ, [0x00, 0x00])
@@ -357,18 +394,18 @@ def set_job_difficulty_mask(difficulty):
 
     send_BM1366(TYPE_CMD | GROUP_ALL | CMD_WRITE, job_difficulty_mask, False)
 
-def send_work(id: int, starting_nonce: int, nbits: int, ntime: int, merkle_root: bytearray, prev_block_hash: bytearray, version: int):
+def send_work(t: WorkRequest):
     job_packet_format = '<B B I I I 32s 32s I'
     job_packet_data = struct.pack(
         job_packet_format,
-        id,
+        t.id,
         0x01,  # num_midstates
-        starting_nonce,
-        nbits,
-        ntime,
-        merkle_root,
-        prev_block_hash,
-        version
+        t.starting_nonce,
+        t.nbits,
+        t.ntime,
+        t.merkle_root,
+        t.prev_block_hash,
+        t.version
     )
     logging.debug("%s", bytearray(job_packet_data).hex())
 
@@ -397,24 +434,3 @@ def receive_work():
 def reverse_uint16(num):
     return ((num >> 8) | (num << 8)) & 0xFFFF
 
-# Process work function
-def process_work(global_state):
-    asic_res = receive_work()
-
-    if asic_res is None:
-        return None
-
-    job_id = asic_res.job_id
-    rx_job_id = job_id & 0xF8
-
-    if not global_state.valid_jobs.get(rx_job_id):
-        logging.error(f"Invalid job nonce found, id={rx_job_id}")
-        return None
-
-    rolled_version = global_state.ASIC_TASK_MODULE.active_jobs[rx_job_id].version
-
-    # Reverse the 16-bit value and shift it left by 13
-    rolled_version = ((reverse_uint16(asic_res.version) << 13) | rolled_version) & 0xFFFFFFFF
-
-    result = TaskResult(rx_job_id, asic_res.nonce, rolled_version)
-    return result
