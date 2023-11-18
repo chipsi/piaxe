@@ -1056,6 +1056,11 @@
       (net 56 "Net-(Q1-D)") (pinfunction "1") (pintype "passive") (thermal_bridge_angle 45) (tstamp 33fb2504-7836-44fb-a465-cc8b4267db01))
     (pad "2" smd rect (at 3.805 0 270) (size 3.3 2.8) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 68 "Net-(JP2-A)") (pinfunction "2") (pintype "passive") (thermal_bridge_angle 45) (tstamp 7a1158d3-1c4f-4893-a3b7-a163faec89e4))
+    (model "/home/thomas/git/piaxe/3d/FP1006V2-R.STEP"
+      (offset (xyz 3 -7.5 10))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 180 0))
+    )
   )
 
   (footprint "Resistor_SMD:R_0805_2012Metric" (layer "F.Cu")
@@ -2074,7 +2079,7 @@
       (net 66 "+12V") (pinfunction "D") (pintype "passive") (solder_paste_margin_ratio -0.15) (tstamp 1b726a06-d3fa-4788-92e6-aaee4dc72c51))
     (pad "3" smd rect (at 2.8 1.905 270) (size 0.7 0.7) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 66 "+12V") (pinfunction "D") (pintype "passive") (solder_paste_margin_ratio -0.15) (tstamp 50d94fcc-5559-452a-8025-7d9f1e8b9583))
-    (model "${KIPRJMOD}/3d/AB2_SON5x6MM.wrl"
+    (model "${KIPRJMOD}/../3d/AB2_SON5x6MM.wrl"
       (offset (xyz 0 0 0))
       (scale (xyz 0.4 0.4 1))
       (rotate (xyz 0 0 0))
@@ -2176,7 +2181,7 @@
       (net 56 "Net-(Q1-D)") (pinfunction "D") (pintype "passive") (solder_paste_margin_ratio -0.15) (tstamp 0890c3a8-532b-4ba4-a785-2dd3e993bdf7))
     (pad "3" smd rect (at 2.8 1.905 90) (size 0.7 0.7) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 56 "Net-(Q1-D)") (pinfunction "D") (pintype "passive") (solder_paste_margin_ratio -0.15) (tstamp fcc6d50d-7f48-4f43-8a7f-159c023c72b6))
-    (model "${KIPRJMOD}/3d/AB2_SON5x6MM.wrl"
+    (model "${KIPRJMOD}/../3d/AB2_SON5x6MM.wrl"
       (offset (xyz 0 0 0))
       (scale (xyz 0.4 0.4 1))
       (rotate (xyz 0 0 0))
@@ -2789,7 +2794,7 @@
       (net 7 "+1V5") (pinfunction "VDD") (pintype "input") (thermal_bridge_angle 45) (tstamp 2851455b-5658-4b21-9123-be4fb178ffbe))
     (pad "30" smd rect locked (at 0 1.108 180) (size 4.277 4.53) (layers "F.Cu" "F.Mask")
       (net 1 "GND") (pinfunction "GND") (pintype "input") (thermal_bridge_angle 45) (tstamp f35fe548-95fd-45dd-98ce-2faf210d7767))
-    (model "${KIPRJMOD}/3d/heatsink-40x40.step"
+    (model "${KIPRJMOD}/../3d/heatsink-40x40.step"
       (offset (xyz -19.75 -19.25 0.8))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3670,7 +3675,7 @@
       (net 1 "GND") (pintype "passive") (tstamp 3a9f3301-9fde-4436-af32-0489dd0eb02a))
     (pad "3" thru_hole circle (at 4.7 3) (size 2.6 2.6) (drill 1.6) (layers "*.Cu" "*.Mask")
       (net 1 "GND") (pintype "passive") (tstamp 503f3b18-1e7a-4d79-94dd-ba37925a6d20))
-    (model "${KIPRJMOD}/3d/barrel-jack.step"
+    (model "${KIPRJMOD}/../3d/barrel-jack.step"
       (offset (xyz 0 -14 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 -90))
@@ -3717,7 +3722,7 @@
       (net 66 "+12V") (pintype "passive") (tstamp 715115b7-7750-4f55-bb4e-4829c50c7ac5))
     (pad "2" smd rect (at 3.1875 0) (size 4.245 3.81) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 67 "Net-(F1-Pad2)") (pintype "passive") (tstamp 40ea8481-d6cd-45e0-b7ed-dc2cd2f12571))
-    (model "${KIPRJMOD}/3d/Littelfuse 0154.500DRT without value_black v2.step"
+    (model "${KIPRJMOD}/../3d/Littelfuse 0154.500DRT without value_black v2.step"
       (offset (xyz -10.75 -2.5 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
