@@ -1,3 +1,5 @@
+# python port from https://github.com/skot/ESP-Miner
+
 import struct
 import serial
 
@@ -77,14 +79,15 @@ class AsicResult:
     def print(self):
         print("AsicResult:")
         print(f"  preamble:        {self.preamble}")
-        print(f"  nonce:           {self.nonce:04x}")
+        print(f"  nonce:           {self.nonce:08x}")
         print(f"  midstate_num:    {self.midstate_num}")
-        print(f"  job_id:          {self.job_id}")
+        print(f"  job_id:          {self.job_id:02x}")
         print(f"  version:         {self.version:04x}")
         print(f"  crc:             {self.crc:02x}")
 
 class WorkRequest:
     def __init__(self):
+        self.time = None
         self.id  = int(0)
         self.starting_nonce = int(0)
         self.nbits = int(0)
@@ -94,6 +97,7 @@ class WorkRequest:
         self.version = int(0)
 
     def create_work(self, id, starting_nonce, nbits, ntime, merkle_root, prev_block_hash, version):
+        self.time = time.time()
         self.id = id
         self.starting_nonce = starting_nonce
         self.nbits = nbits
@@ -105,12 +109,12 @@ class WorkRequest:
     def print(self):
         print("WorkRequest:")
         print(f"  id:              {self.id:02x}")
-        print(f"  starting_nonce:  {self.starting_nonce:04x}")
-        print(f"  nbits:           {self.nbits:04x}")
-        print(f"  ntime:           {self.ntime:04x}")
+        print(f"  starting_nonce:  {self.starting_nonce:08x}")
+        print(f"  nbits:           {self.nbits:08x}")
+        print(f"  ntime:           {self.ntime:08x}")
         print(f"  merkle_root:     {self.merkle_root.hex()}")
         print(f"  prev_block_hash: {self.prev_block_hash.hex()}")
-        print(f"  version:         {self.version:04x}")
+        print(f"  version:         {self.version:08x}")
 
 
 
@@ -411,9 +415,9 @@ def send_work(t: WorkRequest):
 
     send_BM1366((TYPE_JOB | GROUP_SINGLE | CMD_WRITE), job_packet_data)
 
-def receive_work():
+def receive_work(timeout=60000):
     # Read 11 bytes from serial port
-    asic_response_buffer = serial_rx_func(11, 60000)
+    asic_response_buffer = serial_rx_func(11, timeout)
 
     # Check for valid response
     if not asic_response_buffer:

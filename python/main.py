@@ -79,7 +79,7 @@ while (not is_power_good()):
 bm1366.ll_init(serial_tx_func, serial_rx_func, reset_func)
 
 # init bm1366
-bm1366.init(400)
+bm1366.init(485)
 init_response = bm1366.receive_work()
 
 if init_response.nonce != 0x00006613:

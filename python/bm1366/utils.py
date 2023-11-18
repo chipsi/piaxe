@@ -1,3 +1,5 @@
+# python port from https://github.com/skot/ESP-Miner
+
 import sys
 import hashlib
 import struct
