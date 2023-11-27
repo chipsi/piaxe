@@ -3,7 +3,8 @@ Original Repository: https://github.com/skot/bitaxe
 
 This is a variant (Bitaxe ultra 1.3 with BM1366) for Raspberry Pi.
 
-Please don't use it for production yet, the previous version had some issues and the 1.2 version is not yet tested.
+Update: Miner is running stable 🥳
+
 
 ![image](https://github.com/shufps/piaxe/assets/3079832/26420be6-9c2b-4226-b3f1-904a380de3df)
 
@@ -18,6 +19,7 @@ Differences:
 - removed every additional features like DAC, current- and temperature measurement, temperature controlled fan PWM controller, additional testpoints
 - replaced level shifter IC with smaller one-channel SC70-5 types
 - smallest components have 0805 size for easier manual assembly
+- LM75 compatible temperature sensor under the heatsink
 
 Installation:
 
