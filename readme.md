@@ -22,9 +22,12 @@ Differences:
 - smallest components have 0805 size for easier manual assembly
 - LM75 compatible temperature sensor under the heatsink
 
-Installation:
+Installation: ( TODO 🙈)
 
 - add to `/boot/config.txt`:
 ```
 dtoverlay=pwm
 ```
+
+Stratum Mining Client:<br>
+https://github.com/shufps/piaxe-miner
