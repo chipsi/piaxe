@@ -2097,8 +2097,8 @@
     (property "Datasheet" "~" (at 227.33 135.89 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 9ecc3dce-9233-48c5-98dc-c96cabda07bc))
-    (pin "2" (uuid 635f7f4e-c9dd-4a59-bb95-892b3cbdfedf))
+    (pin "1" (uuid d89938a5-f4a1-42bf-9e86-b40ca8246cfb))
+    (pin "2" (uuid d009ca4a-c985-450b-a42f-a962f144a2f7))
     (instances
       (project "piaxe"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4cf9c075-d009-4c35-9949-adda70ae20c7"
@@ -3003,8 +3003,8 @@
     (property "Datasheet" "~" (at 236.855 135.89 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid a82b23f6-1fca-4fe7-8bf5-133504286c81))
-    (pin "2" (uuid f2828353-addb-4e7a-8c04-9061211571d9))
+    (pin "1" (uuid 1465f46f-8575-443f-ab44-a49f8bd6de35))
+    (pin "2" (uuid e591e87f-fb2e-44b3-a863-2d8cc022f10f))
     (instances
       (project "piaxe"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4cf9c075-d009-4c35-9949-adda70ae20c7"
