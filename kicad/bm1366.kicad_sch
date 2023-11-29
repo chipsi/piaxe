@@ -5,7 +5,7 @@
   (paper "A")
 
   (title_block
-    (title "BM1366 bitaxe")
+    (title "BM1366 PiAxe")
     (date "2023-10-10")
     (rev "202")
   )
