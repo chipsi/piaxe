@@ -1,7 +1,5 @@
-Original Repository: https://github.com/skot/bitaxe
-
-
-This is a variant (Bitaxe ultra 1.3 with BM1366) for Raspberry Pi.
+This Raspberry Pi mining HAT is based on the [BitAxe Ultra 1.3](https://github.com/skot/bitaxe
+) (with BM1366) design.
 
 Update: Miner is running stable 🥳
 
@@ -11,23 +9,29 @@ Update: Miner is running stable 🥳
 
 
 
-Differences:
+Changes to BitAxe Ultra
+=======================
 
 - powered by 12V and
-- added some protection like TVS diode and fuses
+- added TVS diode and fuses
 - revised buck switching regulator circuit
 - revised heatsink
-- removed every additional features like DAC, current- and temperature measurement, temperature controlled fan PWM controller, additional testpoints
-- replaced level shifter IC with smaller one-channel SC70-5 types
+- removed like DAC (only fixed 1.2V on PiAxe), current measurement, fan PWM controller, additional testpoints
 - smallest components have 0805 size for easier manual assembly
 - LM75 compatible temperature sensor under the heatsink
 
-Installation: ( TODO 🙈)
+Installation
+=============
 
 - add to `/boot/config.txt`:
 ```
 dtoverlay=pwm
 ```
+
+- enable PWM and I2C via `raspi-config`
+
+Mining Client
+=============
 
 Stratum Mining Client:<br>
 https://github.com/shufps/piaxe-miner
