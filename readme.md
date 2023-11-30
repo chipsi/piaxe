@@ -30,6 +30,12 @@ dtoverlay=pwm
 
 - enable `serial` and `I2C` via `raspi-config`
 
+If you want to use Influx and Grafana you need docker too:
+
+```bash
+$ curl -sSL https://get.docker.com | sh
+```
+
 Mining Client
 =============
 
