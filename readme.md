@@ -28,7 +28,7 @@ Installation
 dtoverlay=pwm
 ```
 
-- enable PWM and I2C via `raspi-config`
+- enable `serial` and `I2C` via `raspi-config`
 
 Mining Client
 =============
