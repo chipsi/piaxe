@@ -814,11 +814,11 @@
         )
       )
     )
-    (symbol "power:+1V5" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+    (symbol "power:+1V2" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
       (property "Reference" "#PWR" (at 0 -3.81 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "Value" "+1V5" (at 0 3.556 0)
+      (property "Value" "+1V2" (at 0 3.556 0)
         (effects (font (size 1.27 1.27)))
       )
       (property "Footprint" "" (at 0 0 0)
@@ -830,10 +830,10 @@
       (property "ki_keywords" "global power" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_description" "Power symbol creates a global label with name \"+1V5\"" (at 0 0 0)
+      (property "ki_description" "Power symbol creates a global label with name \"+1V2\"" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (symbol "+1V5_0_1"
+      (symbol "+1V2_0_1"
         (polyline
           (pts
             (xy -0.762 1.27)
@@ -859,9 +859,9 @@
           (fill (type none))
         )
       )
-      (symbol "+1V5_1_1"
+      (symbol "+1V2_1_1"
         (pin power_in line (at 0 0 90) (length 0) hide
-          (name "+1V5" (effects (font (size 1.27 1.27))))
+          (name "+1V2" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27))))
         )
       )
@@ -1354,10 +1354,6 @@
     (stroke (width 0) (type default))
     (uuid eae1631f-3618-4c5d-aef7-b9aadd228732)
   )
-  (wire (pts (xy 222.885 96.52) (xy 222.885 99.695))
-    (stroke (width 0) (type default))
-    (uuid ec99def1-549c-4692-8fa7-5156c896dd5d)
-  )
   (wire (pts (xy 80.645 99.695) (xy 118.745 99.695))
     (stroke (width 0) (type default))
     (uuid f440c097-45f6-4fc0-be6b-1bd926116961)
@@ -1412,7 +1408,7 @@
     (uuid f325a660-ae0e-4d5e-96fa-904d16e48681)
   )
 
-  (hierarchical_label "+1V5" (shape output) (at 251.46 29.845 0) (fields_autoplaced)
+  (hierarchical_label "+1V2" (shape output) (at 251.46 29.845 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 29c8c876-ddb0-418f-85b8-c57f5b463cb4)
   )
@@ -1741,10 +1737,10 @@
   (symbol (lib_id "Connector:TestPoint") (at 227.965 97.79 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3be1ca60-1782-4afc-8da1-0425819e34bf)
-    (property "Reference" "TP1" (at 230.505 93.218 0)
+    (property "Reference" "TP1" (at 229.87 93.218 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "+1V5" (at 230.505 95.758 0)
+    (property "Value" "+1V2" (at 229.87 95.758 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm" (at 233.045 97.79 0)
@@ -1923,6 +1919,31 @@
       (project "piaxe"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/8ec0a9c6-2b78-44ef-a83d-9047d2828409"
           (reference "#PWR083") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+1V2") (at 243.205 29.845 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 5d9324f7-c1ee-42fa-8635-f299f9cc561c)
+    (property "Reference" "#PWR05" (at 247.015 29.845 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+1V2" (at 240.03 29.845 90)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "" (at 243.205 29.845 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 243.205 29.845 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid c3c1a484-5853-4e7e-9db4-815fa7897fa7))
+    (instances
+      (project "piaxe"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/8ec0a9c6-2b78-44ef-a83d-9047d2828409"
+          (reference "#PWR05") (unit 1)
         )
       )
     )
@@ -2198,31 +2219,6 @@
       (project "piaxe"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/8ec0a9c6-2b78-44ef-a83d-9047d2828409"
           (reference "R17") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:+1V5") (at 243.205 29.845 90) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 8d8f2e23-21f7-45e0-a3ad-a7883f9e78aa)
-    (property "Reference" "#PWR018" (at 247.015 29.845 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+1V5" (at 239.395 29.845 90)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "" (at 243.205 29.845 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 243.205 29.845 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid e10a442d-e015-484c-adab-606efe57e0c1))
-    (instances
-      (project "piaxe"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/8ec0a9c6-2b78-44ef-a83d-9047d2828409"
-          (reference "#PWR018") (unit 1)
         )
       )
     )
@@ -2770,31 +2766,6 @@
     )
   )
 
-  (symbol (lib_id "power:+1V5") (at 252.095 96.52 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid e2026042-ed21-450b-bb5e-5f7ac4cf4494)
-    (property "Reference" "#PWR05" (at 252.095 100.33 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+1V5" (at 252.095 92.075 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 252.095 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 252.095 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 8cfa99d8-0eff-48ab-84eb-b3d431973d64))
-    (instances
-      (project "piaxe"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/8ec0a9c6-2b78-44ef-a83d-9047d2828409"
-          (reference "#PWR05") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "power:GND") (at 130.175 87.63 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e8bc6740-a6a4-4054-9231-5664dd2db470)
@@ -2815,6 +2786,31 @@
       (project "piaxe"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/8ec0a9c6-2b78-44ef-a83d-9047d2828409"
           (reference "#PWR071") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+1V2") (at 252.095 96.52 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid ecea9d64-a63d-4adf-a9ba-a397e95b0a10)
+    (property "Reference" "#PWR0120" (at 252.095 100.33 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+1V2" (at 252.095 91.44 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 252.095 96.52 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 252.095 96.52 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid af9d6b8d-38bb-497c-a80a-1f511e711ddf))
+    (instances
+      (project "piaxe"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/8ec0a9c6-2b78-44ef-a83d-9047d2828409"
+          (reference "#PWR0120") (unit 1)
         )
       )
     )

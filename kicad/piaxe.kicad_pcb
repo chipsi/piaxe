@@ -102,7 +102,7 @@
   (net 4 "Net-(U14-VDD3_0)")
   (net 5 "Net-(U14-VDD2_0)")
   (net 6 "Net-(U14-VDD1_0)")
-  (net 7 "+1V5")
+  (net 7 "+1V2")
   (net 8 "Net-(U14-VDD1_1)")
   (net 9 "Net-(U14-VDD2_1)")
   (net 10 "Net-(U14-VDD3_1)")
@@ -950,7 +950,7 @@
       (primitives
       ) (tstamp 2815ceb9-798a-43fa-b5d5-82faa4f3cdb8))
     (pad "2" smd custom (at 0.524 -0.234) (size 1 4.5) (layers "F.Cu" "F.Mask")
-      (net 7 "+1V5") (pinfunction "B") (pintype "passive") (zone_connect 2) (thermal_bridge_angle 45)
+      (net 7 "+1V2") (pinfunction "B") (pintype "passive") (zone_connect 2) (thermal_bridge_angle 45)
       (options (clearance outline) (anchor rect))
       (primitives
       ) (tstamp 2a92a924-ca22-44a0-a8a6-db07ea681574))
@@ -2678,7 +2678,7 @@
         (effects (font (size 0.8 0.8) (thickness 0.15)))
       (tstamp 6d673eda-2d8d-411e-afd5-7b105d01dbf9)
     )
-    (fp_text value "+1V5" (at 0 2.05) (layer "F.Fab")
+    (fp_text value "+1V2" (at 0 2.05) (layer "F.Fab")
         (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 53253a53-6c2a-4fd9-8549-794b46ec52b0)
     )
@@ -2791,7 +2791,7 @@
     (pad "28" smd rect locked (at 2.916 -3.25 180) (size 0.792 0.221) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 8 "Net-(U14-VDD1_1)") (pinfunction "VDD1_1") (pintype "input") (thermal_bridge_angle 45) (tstamp 3227f945-d7cd-4d35-9660-f3a606648f2b))
     (pad "29" smd rect locked (at 0 -2.468 180) (size 4.277 1.81) (layers "F.Cu" "F.Mask")
-      (net 7 "+1V5") (pinfunction "VDD") (pintype "input") (thermal_bridge_angle 45) (tstamp 2851455b-5658-4b21-9123-be4fb178ffbe))
+      (net 7 "+1V2") (pinfunction "VDD") (pintype "input") (thermal_bridge_angle 45) (tstamp 2851455b-5658-4b21-9123-be4fb178ffbe))
     (pad "30" smd rect locked (at 0 1.108 180) (size 4.277 4.53) (layers "F.Cu" "F.Mask")
       (net 1 "GND") (pinfunction "GND") (pintype "input") (thermal_bridge_angle 45) (tstamp f35fe548-95fd-45dd-98ce-2faf210d7767))
     (model "${KIPRJMOD}/../3d/heatsink-40x40.step"
@@ -7693,7 +7693,7 @@
     (fp_line (start 1 0.625) (end 1 -0.625)
       (stroke (width 0.1) (type solid)) (layer "B.Fab") (tstamp 4fbef8ec-6d1e-4c97-9474-fb88910ebae9))
     (pad "1" smd roundrect (at -0.95 0 90) (size 1 1.45) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.25)
-      (net 7 "+1V5") (pintype "passive") (tstamp 9c34da49-1873-409f-942a-bd5da291b2aa))
+      (net 7 "+1V2") (pintype "passive") (tstamp 9c34da49-1873-409f-942a-bd5da291b2aa))
     (pad "2" smd roundrect (at 0.95 0 90) (size 1 1.45) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.25)
       (net 1 "GND") (pintype "passive") (tstamp af63ff29-91db-4a5b-8ede-36983c4f9b02))
     (model "${KICAD6_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.wrl"
@@ -7749,7 +7749,7 @@
     (fp_line (start 1 0.625) (end 1 -0.625)
       (stroke (width 0.1) (type solid)) (layer "B.Fab") (tstamp f01f3c63-d006-42b4-b283-7aa50010dc06))
     (pad "1" smd roundrect (at -0.95 0 90) (size 1 1.45) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.25)
-      (net 7 "+1V5") (pintype "passive") (tstamp 5f04d8a4-0706-4869-a82d-ea19704a0b03))
+      (net 7 "+1V2") (pintype "passive") (tstamp 5f04d8a4-0706-4869-a82d-ea19704a0b03))
     (pad "2" smd roundrect (at 0.95 0 90) (size 1 1.45) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.25)
       (net 1 "GND") (pintype "passive") (tstamp 862f15b4-fbbf-4207-9ef3-f233ad778804))
     (model "${KICAD6_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.wrl"
@@ -7860,7 +7860,7 @@
     (fp_line (start 1.6 1.25) (end 1.6 -1.25)
       (stroke (width 0.1) (type solid)) (layer "B.Fab") (tstamp 3ff279a0-b68f-468d-aa6e-36051f960622))
     (pad "1" smd roundrect (at -1.475 0 270) (size 1.15 2.7) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.2173913043)
-      (net 7 "+1V5") (pintype "passive") (tstamp 7ec072c5-4081-4cd5-b032-48f499f8fe4e))
+      (net 7 "+1V2") (pintype "passive") (tstamp 7ec072c5-4081-4cd5-b032-48f499f8fe4e))
     (pad "2" smd roundrect (at 1.475 0 270) (size 1.15 2.7) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.2173913043)
       (net 1 "GND") (pintype "passive") (tstamp 180e3a0e-fcc7-4ea2-9535-c8d35906163d))
     (model "${KICAD6_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_1210_3225Metric.wrl"
@@ -8028,7 +8028,7 @@
     (fp_line (start 1 0.625) (end 1 -0.625)
       (stroke (width 0.1) (type solid)) (layer "B.Fab") (tstamp 3e1e9b3d-0266-4fd3-938f-3d16acf12b37))
     (pad "1" smd roundrect (at -0.95 0 180) (size 1 1.45) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.25)
-      (net 7 "+1V5") (pintype "passive") (tstamp 2da7ac2b-7994-4c6d-9d2c-c2667262e46e))
+      (net 7 "+1V2") (pintype "passive") (tstamp 2da7ac2b-7994-4c6d-9d2c-c2667262e46e))
     (pad "2" smd roundrect (at 0.95 0 180) (size 1 1.45) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.25)
       (net 8 "Net-(U14-VDD1_1)") (pintype "passive") (tstamp 823effae-41a9-444f-b65e-60ab2eb05942))
     (model "${KICAD6_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.wrl"
@@ -8421,7 +8421,7 @@
     (fp_line (start 1.6 1.25) (end 1.6 -1.25)
       (stroke (width 0.1) (type solid)) (layer "B.Fab") (tstamp 1eee09d1-a86f-4014-8e80-8378ed5cc5fe))
     (pad "1" smd roundrect (at -1.475 0 270) (size 1.15 2.7) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.2173913043)
-      (net 7 "+1V5") (pintype "passive") (tstamp c5f0a510-794d-4ce6-8296-a31164e99be6))
+      (net 7 "+1V2") (pintype "passive") (tstamp c5f0a510-794d-4ce6-8296-a31164e99be6))
     (pad "2" smd roundrect (at 1.475 0 270) (size 1.15 2.7) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.2173913043)
       (net 1 "GND") (pintype "passive") (tstamp bfdfd061-a3eb-413e-af81-93aaedf7fe39))
     (model "${KICAD6_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_1210_3225Metric.wrl"
@@ -8477,7 +8477,7 @@
     (fp_line (start 1 0.625) (end 1 -0.625)
       (stroke (width 0.1) (type solid)) (layer "B.Fab") (tstamp 1e48a9e8-11ee-4806-ab57-cf3579f8f90f))
     (pad "1" smd roundrect (at -0.95 0 90) (size 1 1.45) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.25)
-      (net 7 "+1V5") (pintype "passive") (tstamp b081cb32-fe19-4f76-b7d1-8770e26bc726))
+      (net 7 "+1V2") (pintype "passive") (tstamp b081cb32-fe19-4f76-b7d1-8770e26bc726))
     (pad "2" smd roundrect (at 0.95 0 90) (size 1 1.45) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.25)
       (net 1 "GND") (pintype "passive") (tstamp 770cdbb0-43a2-4867-932d-fe8dd932c382))
     (model "${KICAD6_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.wrl"
@@ -8612,7 +8612,7 @@
     (fp_line (start 1.6 1.25) (end 1.6 -1.25)
       (stroke (width 0.1) (type solid)) (layer "B.Fab") (tstamp 3cfbb488-2051-445c-acde-5f189ad02e7d))
     (pad "1" smd roundrect (at -1.475 0 270) (size 1.15 2.7) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.2173913043)
-      (net 7 "+1V5") (pintype "passive") (tstamp c039f57d-8a89-4ac0-b16c-8553fa22c074))
+      (net 7 "+1V2") (pintype "passive") (tstamp c039f57d-8a89-4ac0-b16c-8553fa22c074))
     (pad "2" smd roundrect (at 1.475 0 270) (size 1.15 2.7) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.2173913043)
       (net 1 "GND") (pintype "passive") (tstamp 3a6ad478-992b-4555-9a28-18eae5227ffa))
     (model "${KICAD6_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_1210_3225Metric.wrl"
@@ -8668,7 +8668,7 @@
     (fp_line (start 1 0.625) (end 1 -0.625)
       (stroke (width 0.1) (type solid)) (layer "B.Fab") (tstamp 221cf074-2b50-42e9-83c8-9fe33f7b35dc))
     (pad "1" smd roundrect (at -0.95 0 90) (size 1 1.45) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.25)
-      (net 7 "+1V5") (pintype "passive") (tstamp f9d208d7-8807-43bf-a668-7ee850514a55))
+      (net 7 "+1V2") (pintype "passive") (tstamp f9d208d7-8807-43bf-a668-7ee850514a55))
     (pad "2" smd roundrect (at 0.95 0 90) (size 1 1.45) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.25)
       (net 1 "GND") (pintype "passive") (tstamp d028c16a-04d1-432c-a140-463fc230e65c))
     (model "${KICAD6_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.wrl"
@@ -8781,7 +8781,7 @@
     (fp_line (start 1.6 1.25) (end 1.6 -1.25)
       (stroke (width 0.1) (type solid)) (layer "B.Fab") (tstamp a943a97e-5af0-44e8-a969-084079882f49))
     (pad "1" smd roundrect (at -1.475 0 270) (size 1.15 2.7) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.2173913043)
-      (net 7 "+1V5") (pintype "passive") (tstamp ab0afcfd-360a-4a24-9cf3-d37a98bf4f6b))
+      (net 7 "+1V2") (pintype "passive") (tstamp ab0afcfd-360a-4a24-9cf3-d37a98bf4f6b))
     (pad "2" smd roundrect (at 1.475 0 270) (size 1.15 2.7) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.2173913043)
       (net 1 "GND") (pintype "passive") (tstamp 4b129cab-d75d-48f0-b8ff-9cda12c8c885))
     (model "${KICAD6_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_1210_3225Metric.wrl"
@@ -9179,7 +9179,7 @@
     (pad "1" smd roundrect (at -0.95 0 180) (size 1 1.45) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.25)
       (net 6 "Net-(U14-VDD1_0)") (pintype "passive") (tstamp 6791844f-f45e-422d-a4c6-231b5241cad3))
     (pad "2" smd roundrect (at 0.95 0 180) (size 1 1.45) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.25)
-      (net 7 "+1V5") (pintype "passive") (tstamp b43a0ad0-1d34-4a07-8c5d-90be6b7aaf49))
+      (net 7 "+1V2") (pintype "passive") (tstamp b43a0ad0-1d34-4a07-8c5d-90be6b7aaf49))
     (model "${KICAD6_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.wrl"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
@@ -10337,7 +10337,7 @@
       )
     )
   )
-  (zone (net 7) (net_name "+1V5") (layer "F.Cu") (tstamp 16ee0d88-f826-4ca3-8ceb-04dac74458c8) (hatch edge 0.5)
+  (zone (net 7) (net_name "+1V2") (layer "F.Cu") (tstamp 16ee0d88-f826-4ca3-8ceb-04dac74458c8) (hatch edge 0.5)
     (priority 9)
     (connect_pads yes (clearance 0.4))
     (min_thickness 0.25) (filled_areas_thickness no)
@@ -30604,7 +30604,7 @@
       )
     )
   )
-  (zone (net 7) (net_name "+1V5") (layer "B.Cu") (tstamp 25e52772-7c8e-4b16-bc41-b1c1f61f62b6) (hatch edge 0.5)
+  (zone (net 7) (net_name "+1V2") (layer "B.Cu") (tstamp 25e52772-7c8e-4b16-bc41-b1c1f61f62b6) (hatch edge 0.5)
     (priority 10)
     (connect_pads yes (clearance 0.4))
     (min_thickness 0.25) (filled_areas_thickness no)
@@ -30637,7 +30637,7 @@
       )
     )
   )
-  (zone (net 7) (net_name "+1V5") (layer "B.Cu") (tstamp 3f5204e3-975e-4395-9588-33a45e308420) (hatch edge 0.5)
+  (zone (net 7) (net_name "+1V2") (layer "B.Cu") (tstamp 3f5204e3-975e-4395-9588-33a45e308420) (hatch edge 0.5)
     (priority 13)
     (connect_pads yes (clearance 0.4))
     (min_thickness 0.25) (filled_areas_thickness no)
