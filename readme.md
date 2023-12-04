@@ -3,9 +3,7 @@ This Raspberry Pi mining HAT is based on the [BitAxe Ultra 1.3](https://github.c
 
 Update: Miner is running stable 🥳
 
-
-![image](https://github.com/shufps/piaxe/assets/3079832/1b79eda2-acb0-4a86-ad00-c1af6b7e4b8b)
-
+<img src="https://github.com/shufps/piaxe-miner/assets/3079832/bde9dbb6-5687-4b4b-b0a8-7d4b83432937" width="500px"/>
 
 
 
