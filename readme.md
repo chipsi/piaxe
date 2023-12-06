@@ -37,5 +37,7 @@ $ curl -sSL https://get.docker.com | sh
 Mining Client
 =============
 
+<img src="https://github.com/shufps/piaxe-miner/assets/3079832/8d34ec13-15bd-4dd4-abd3-9588c823c494" width="400px"/>
+
 Stratum Mining Client:<br>
 https://github.com/shufps/piaxe-miner
