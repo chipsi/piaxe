@@ -42,6 +42,9 @@ $ sudo apt install python3-pip
 # install libraries
 $ pip3 install pyserial
 $ pip3 install rpi_hardware_pwm
+
+# install i2c-tools
+$ sudo apt install i2c-tools
 ```
 
 
