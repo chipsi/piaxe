@@ -40,8 +40,7 @@ Python:
 $ sudo apt install python3-pip
 
 # install libraries
-$ pip3 install pyserial
-$ pip3 install rpi_hardware_pwm
+$ for lib in pyserial rpi_hardware_pwm smbus influxdb-client pytz; do pip3 install $lib; done
 
 # install i2c-tools
 $ sudo apt install i2c-tools
