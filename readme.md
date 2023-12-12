@@ -34,6 +34,17 @@ If you want to use Influx and Grafana you need docker too:
 $ curl -sSL https://get.docker.com | sh
 ```
 
+Python:
+```bash
+# install pip3
+$ sudo apt install python3-pip
+
+# install libraries
+$ pip3 install pyserial
+$ pip3 install rpi_hardware_pwm
+```
+
+
 Mining Client
 =============
 
