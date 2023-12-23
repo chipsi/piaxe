@@ -34,9 +34,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.3,
-          "height": 0.5,
-          "width": 0.5
+          "drill": 0.0,
+          "height": 1.81,
+          "width": 3.9
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -46,7 +46,7 @@
         "silk_text_upright": false,
         "zones": {
           "45_degree_only": false,
-          "min_clearance": 0.25
+          "min_clearance": 0.5
         }
       },
       "diff_pair_dimensions": [
@@ -176,6 +176,7 @@
       ],
       "track_widths": [
         0.0,
+        0.2032,
         0.254,
         0.4,
         0.508,
@@ -527,7 +528,7 @@
     ],
     [
       "9bc1a7d6-07fa-4858-9423-fb2dbf7da294",
-      "Pi"
+      "STM32"
     ]
   ],
   "text_variables": {}
