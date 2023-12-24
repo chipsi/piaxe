@@ -459,10 +459,10 @@
       (net 7 "+1V2") (pinfunction "VDD") (pintype "input") (thermal_bridge_angle 45) (tstamp 64d9b213-e6ad-4113-a252-4c90340bf4e3))
     (pad "30" smd rect locked (at 0 1.108 270) (size 4.277 4.53) (layers "F.Cu" "F.Mask")
       (net 1 "GND") (pinfunction "GND") (pintype "input") (thermal_bridge_angle 45) (tstamp 00771084-1d24-4084-aa02-8c9c8f22186b))
-    (model "${KIPRJMOD}/../3d/heatsink-40x40.step" hide
-      (offset (xyz -19.75 -19.25 0.8))
+    (model "/home/thomas/git/quadaxe/3d/bm1366.step"
+      (offset (xyz 0 0 0.3))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz 0 0 -90))
     )
   )
 
@@ -569,6 +569,11 @@
       (net 50 "Net-(Q3-S)") (pinfunction "1") (pintype "passive") (thermal_bridge_angle 45) (tstamp 015aa817-3710-4f04-adbd-7919e5808448))
     (pad "2" smd rect (at 3.805 0) (size 3.3 2.8) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 64 "Net-(L1-Pad2)") (pinfunction "2") (pintype "passive") (thermal_bridge_angle 45) (tstamp e74e061e-562c-4681-a0f4-bcede4489533))
+    (model "/home/thomas/git/quadaxe/3d/FP1006V2-R.STEP"
+      (offset (xyz 3 -7.5 10))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 180 0))
+    )
   )
 
   (footprint "Resistor_SMD:R_0805_2012Metric" (layer "F.Cu")
@@ -749,7 +754,7 @@
         (effects (font (size 0.8 0.8) (thickness 0.15)))
       (tstamp 6f55581c-feae-4ecd-9bdb-bd442aae9e67)
     )
-    (fp_text value "MountingHole_3.2mm_M3_Pad_Via" (at 0 4.2) (layer "F.Fab")
+    (fp_text value "MountingHole_3.2mm_M3_Pad_Via" (at 0 4.2) (layer "F.Fab") hide
         (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 86237eb3-3b18-4fb9-b6af-17657045d962)
     )
@@ -2356,7 +2361,7 @@
         (effects (font (size 0.8 0.8) (thickness 0.15)))
       (tstamp 4b911539-bc0e-4c31-9bc3-36878e4d0bec)
     )
-    (fp_text value "MountingHole_3.2mm_M3" (at 0 4.2) (layer "F.Fab")
+    (fp_text value "MountingHole_3.2mm_M3" (at 0 4.2) (layer "F.Fab") hide
         (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 0d746908-3608-4c34-aede-e4ec594d6fe4)
     )
@@ -2444,6 +2449,11 @@
     (model "${KICAD6_3DMODEL_DIR}/Package_SON.3dshapes/VSONP-8-1EP_5x6_P1.27mm.wrl"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
+    (model "/home/thomas/git/quadaxe/3d/AB2_SON5x6MM.wrl"
+      (offset (xyz 0 0 0))
+      (scale (xyz 0.39 0.39 1))
       (rotate (xyz 0 0 0))
     )
   )
@@ -2883,10 +2893,10 @@
       (net 1 "GND") (pinfunction "shield") (pintype "passive") (tstamp 8684c5df-4f8d-4c6b-88cb-f88a688e9797))
     (pad "6" smd rect (at 2.975 -0.565 180) (size 1.825 0.7) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 1 "GND") (pinfunction "shield") (pintype "passive") (tstamp 301932a0-4c07-45ae-9ebc-fde4b01eec05))
-    (model "${KICAD6_3DMODEL_DIR}/Connector_USB.3dshapes/USB_Micro-B_Amphenol_10103594-0001LF_Horizontal.wrl"
-      (offset (xyz 0 0 0))
+    (model "/home/thomas/git/quadaxe/3d/10103594.step"
+      (offset (xyz 0 0 1.5))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz 90 0 180))
     )
   )
 
@@ -3214,7 +3224,7 @@
         (effects (font (size 0.8 0.8) (thickness 0.15)))
       (tstamp 3cb39dc0-627e-453d-aae4-06c263ae7f66)
     )
-    (fp_text value "MountingHole_3.2mm_M3" (at 0 4.2) (layer "F.Fab")
+    (fp_text value "MountingHole_3.2mm_M3" (at 0 4.2) (layer "F.Fab") hide
         (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 4679d5b9-52be-4702-818b-c03c2bdd1832)
     )
@@ -3239,7 +3249,7 @@
         (effects (font (size 0.8 0.8) (thickness 0.15)))
       (tstamp 0bc0fb08-4539-4000-b102-3b67edfd81a6)
     )
-    (fp_text value "MountingHole_3.2mm_M3" (at 0 4.2) (layer "F.Fab")
+    (fp_text value "MountingHole_3.2mm_M3" (at 0 4.2) (layer "F.Fab") hide
         (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 1a3c7732-7a9c-46e8-b504-6f0f7f88d076)
     )
@@ -3723,6 +3733,11 @@
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
     )
+    (model "/home/thomas/git/quadaxe/3d/AB2_SON5x6MM.wrl"
+      (offset (xyz 0 0 0))
+      (scale (xyz 0.39 0.39 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (footprint "Capacitor_SMD:C_0805_2012Metric" (layer "F.Cu")
@@ -4012,7 +4027,7 @@
         (effects (font (size 0.8 0.8) (thickness 0.15)))
       (tstamp 6c0f9f42-f634-4f5d-a9e0-988eee5267be)
     )
-    (fp_text value "MountingHole_3.2mm_M3_Pad_Via" (at 0 4.2) (layer "F.Fab")
+    (fp_text value "MountingHole_3.2mm_M3_Pad_Via" (at 0 4.2) (layer "F.Fab") hide
         (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 9bfda58e-91c2-4b5a-8fa8-069d8c7c51e4)
     )
@@ -4108,6 +4123,11 @@
     (model "${KICAD6_3DMODEL_DIR}/Package_SON.3dshapes/VSONP-8-1EP_5x6_P1.27mm.wrl"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
+    (model "/home/thomas/git/quadaxe/3d/AB2_SON5x6MM.wrl"
+      (offset (xyz 0 0 0))
+      (scale (xyz 0.39 0.39 1))
       (rotate (xyz 0 0 0))
     )
   )
@@ -4307,7 +4327,7 @@
         (effects (font (size 0.8 0.8) (thickness 0.15)))
       (tstamp 9163d270-18da-4f5a-90ef-9face463d0cc)
     )
-    (fp_text value "MountingHole_3.2mm_M3" (at 0 4.2) (layer "F.Fab")
+    (fp_text value "MountingHole_3.2mm_M3" (at 0 4.2) (layer "F.Fab") hide
         (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 28f5c612-6e55-4964-9247-6e9cf920111b)
     )
@@ -4476,6 +4496,11 @@
       (net 7 "+1V2") (pinfunction "VDD") (pintype "input") (thermal_bridge_angle 45) (tstamp 3b64680a-a162-47cb-b98f-61444e08e241))
     (pad "30" smd rect (at 0 1.108 270) (size 4.277 4.53) (layers "F.Cu" "F.Mask")
       (net 1 "GND") (pinfunction "GND") (pintype "input") (thermal_bridge_angle 45) (tstamp 42691c3a-ec5d-4f51-8209-1e5528ee7346))
+    (model "/home/thomas/git/quadaxe/3d/bm1366.step"
+      (offset (xyz 0 0 0.3))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 -90))
+    )
   )
 
   (footprint "Capacitor_SMD:C_0805_2012Metric" (layer "F.Cu")
@@ -4704,7 +4729,7 @@
         (effects (font (size 0.8 0.8) (thickness 0.15)))
       (tstamp 9e780fee-b34f-4953-bb9f-8bed94f0a613)
     )
-    (fp_text value "MountingHole_3.2mm_M3_Pad_Via" (at 0 4.2) (layer "F.Fab")
+    (fp_text value "MountingHole_3.2mm_M3_Pad_Via" (at 0 4.2) (layer "F.Fab") hide
         (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 608a7f6b-77bb-4918-837f-49ecd1ac0eb0)
     )
@@ -5199,6 +5224,11 @@
       (net 7 "+1V2") (pinfunction "VDD") (pintype "input") (thermal_bridge_angle 45) (tstamp 149bcc9c-73d3-4d94-a1a7-cb1101b5acc5))
     (pad "30" smd rect (at 0 1.108 90) (size 4.277 4.53) (layers "F.Cu" "F.Mask")
       (net 1 "GND") (pinfunction "GND") (pintype "input") (thermal_bridge_angle 45) (tstamp 9e1849f2-64c0-4158-9239-02cfe64a8a65))
+    (model "/home/thomas/git/quadaxe/3d/bm1366.step"
+      (offset (xyz 0 0 0.3))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 -90))
+    )
   )
 
   (footprint "Capacitor_SMD:C_0805_2012Metric" (layer "F.Cu")
@@ -5673,7 +5703,7 @@
         (effects (font (size 0.8 0.8) (thickness 0.15)))
       (tstamp a78b3008-0de5-49be-bd9d-2b26d212a533)
     )
-    (fp_text value "MountingHole_3.2mm_M3_Pad_Via" (at 0 4.2) (layer "F.Fab")
+    (fp_text value "MountingHole_3.2mm_M3_Pad_Via" (at 0 4.2) (layer "F.Fab") hide
         (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 1713d04d-04f2-463d-943a-204b639be6c1)
     )
@@ -5852,6 +5882,11 @@
       (net 7 "+1V2") (pinfunction "VDD") (pintype "input") (thermal_bridge_angle 45) (tstamp f8dd71df-148b-4ae8-9893-89280fa017b4))
     (pad "30" smd rect (at 0 1.108 90) (size 4.277 4.53) (layers "F.Cu" "F.Mask")
       (net 1 "GND") (pinfunction "GND") (pintype "input") (thermal_bridge_angle 45) (tstamp 24737655-9cb4-44a4-a75c-4fde55c82cb1))
+    (model "/home/thomas/git/quadaxe/3d/bm1366.step"
+      (offset (xyz 0 0 0.3))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 -90))
+    )
   )
 
   (footprint "MountingHole:MountingHole_3.2mm_M3_Pad_Via" locked (layer "F.Cu")
@@ -5864,7 +5899,7 @@
         (effects (font (size 0.8 0.8) (thickness 0.15)))
       (tstamp 995e26bb-b5eb-471a-b699-99b0fdbe01ca)
     )
-    (fp_text value "MountingHole_3.2mm_M3_Pad_Via" (at 0 4.2) (layer "F.Fab")
+    (fp_text value "MountingHole_3.2mm_M3_Pad_Via" (at 0 4.2) (layer "F.Fab") hide
         (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 168669f2-3f98-4f1c-bd5b-115cb0762c09)
     )
@@ -6288,6 +6323,28 @@
       (stroke (width 0.05) (type solid)) (layer "F.CrtYd") (tstamp 05522e2c-9f1b-4f85-88fd-4b27121e3fcb))
     (pad "1" smd rect (at 0 0) (size 2 2) (layers "F.Cu" "F.Mask")
       (net 23 "Net-(C23-Pad1)") (pinfunction "1") (pintype "passive") (tstamp aa949482-06b9-48a3-80be-3ef14b8bf303))
+  )
+
+  (footprint "myfootprints:dummy" (layer "F.Cu")
+    (tstamp ca9cc32b-0752-4b48-a650-7a7be1b7b393)
+    (at 81.7 70.4)
+    (attr through_hole)
+    (fp_text reference "REF**" (at 0 1.5) (layer "F.SilkS") hide
+        (effects (font (size 1 1) (thickness 0.15)))
+      (tstamp 7d2187b8-dafe-47a0-9ad8-5aeca36a6a19)
+    )
+    (fp_text value "heatsink" (at 0 -1.5) (layer "F.Fab") hide
+        (effects (font (size 1 1) (thickness 0.15)))
+      (tstamp 98fedf90-5359-4df6-bb0f-31545881d495)
+    )
+    (fp_circle (center 0 0) (end 0.5 0)
+      (stroke (width 0.12) (type solid)) (fill none) (layer "Eco1.User") (tstamp c524638b-1767-4e63-a188-8cfad22e80d9))
+    (pad "" smd circle (at 0 0) (size 1.524 1.524) (layers "Dwgs.User") (tstamp 2fa4b00b-06c0-47d4-8ea2-5a7dbb91cbff))
+    (model "/home/thomas/git/quadaxe/3d/heatsink-13x12x5.step"
+      (offset (xyz 0 0 5))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (footprint "Connector_BarrelJack:BarrelJack_CUI_PJ-102AH_Horizontal" (layer "F.Cu")
@@ -8854,6 +8911,11 @@
       (net 11 "Net-(Q5-S)") (pinfunction "1") (pintype "passive") (thermal_bridge_angle 45) (tstamp 4e99e942-6016-4248-99b2-f8c251996f3b))
     (pad "2" smd rect (at 3.805 0) (size 3.3 2.8) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 56 "Net-(L2-Pad2)") (pinfunction "2") (pintype "passive") (thermal_bridge_angle 45) (tstamp 18f29206-6bda-4709-a394-f2a622324ef4))
+    (model "/home/thomas/git/quadaxe/3d/FP1006V2-R.STEP"
+      (offset (xyz 3 -7.5 10))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 180 0))
+    )
   )
 
   (footprint "Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.45x3.45mm_ThermalVias" (layer "F.Cu")
@@ -9316,6 +9378,11 @@
     (model "${KICAD6_3DMODEL_DIR}/Package_SON.3dshapes/VSONP-8-1EP_5x6_P1.27mm.wrl"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
+    (model "/home/thomas/git/quadaxe/3d/AB2_SON5x6MM.wrl"
+      (offset (xyz 0 0 0))
+      (scale (xyz 0.39 0.39 1))
       (rotate (xyz 0 0 0))
     )
   )
@@ -10126,7 +10193,7 @@
         (effects (font (size 0.8 0.8) (thickness 0.15)))
       (tstamp 98113d32-4153-48ef-bd78-cc3c503ededc)
     )
-    (fp_text value "MountingHole_3.2mm_M3_Pad_Via" (at 0 4.2) (layer "F.Fab")
+    (fp_text value "MountingHole_3.2mm_M3_Pad_Via" (at 0 4.2) (layer "F.Fab") hide
         (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 19e73481-c404-47e9-b788-5ec33fb62c5d)
     )
