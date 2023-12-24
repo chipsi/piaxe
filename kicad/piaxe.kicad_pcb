@@ -6325,7 +6325,7 @@
       (net 23 "Net-(C23-Pad1)") (pinfunction "1") (pintype "passive") (tstamp aa949482-06b9-48a3-80be-3ef14b8bf303))
   )
 
-  (footprint "myfootprints:dummy" (layer "F.Cu")
+  (footprint "myfootprints:dummy" locked (layer "F.Cu")
     (tstamp ca9cc32b-0752-4b48-a650-7a7be1b7b393)
     (at 81.7 70.4)
     (attr through_hole)
@@ -6339,7 +6339,7 @@
     )
     (fp_circle (center 0 0) (end 0.5 0)
       (stroke (width 0.12) (type solid)) (fill none) (layer "Eco1.User") (tstamp c524638b-1767-4e63-a188-8cfad22e80d9))
-    (pad "" smd circle (at 0 0) (size 1.524 1.524) (layers "Dwgs.User") (tstamp 2fa4b00b-06c0-47d4-8ea2-5a7dbb91cbff))
+    (pad "" smd circle locked (at 0 0) (size 1.524 1.524) (layers "Dwgs.User") (tstamp 2fa4b00b-06c0-47d4-8ea2-5a7dbb91cbff))
     (model "/home/thomas/git/quadaxe/3d/heatsink-13x12x5.step"
       (offset (xyz 0 0 5))
       (scale (xyz 1 1 1))
