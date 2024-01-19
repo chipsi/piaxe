@@ -1938,7 +1938,7 @@
     (property "Value" "Conn_02x20_Odd_Even" (at 185.42 121.92 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x20_P2.54mm_Vertical" (at 184.15 93.98 0)
+    (property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Vertical" (at 184.15 93.98 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 184.15 93.98 0)
